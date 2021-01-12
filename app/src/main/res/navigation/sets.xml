@@ -18,5 +18,8 @@
         android:id="@+id/setDetailFragment"
         android:name="com.rsms.mtgmanager.views.fragments.SetDetailFragment"
         android:label="fragment_set_detail"
-        tools:layout="@layout/fragment_set_detail" />
+        tools:layout="@layout/fragment_set_detail" >
+        <argument android:name="selectedSet"
+                  app:argType="com.rsms.mtgmanager.domain.Set"/>
+    </fragment>
 </navigation>

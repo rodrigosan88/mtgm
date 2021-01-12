@@ -9,5 +9,17 @@
         android:id="@+id/cardsListFragment2"
         android:name="com.rsms.mtgmanager.views.fragments.CardsListFragment"
         android:label="fragment_cards_list"
-        tools:layout="@layout/fragment_cards_list" />
+        tools:layout="@layout/fragment_cards_list" >
+        <action
+            android:id="@+id/action_cardsListFragment2_to_cardDetailFragment"
+            app:destination="@id/cardDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardDetailFragment"
+        android:name="com.rsms.mtgmanager.views.fragments.CardDetailFragment"
+        android:label="fragment_card_detail"
+        tools:layout="@layout/fragment_card_detail">
+        <argument android:name="selectedCard"
+            app:argType="com.rsms.mtgmanager.domain.Card"/>
+    </fragment>
 </navigation>

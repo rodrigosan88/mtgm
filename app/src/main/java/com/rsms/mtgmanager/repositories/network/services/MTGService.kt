@@ -49,7 +49,9 @@ class MTGService (private val context: Context) {
                     colorIdentity = dto.colorIdentity,
                     type = dto.type,
                     types = dto.types,
-                    subtypes = dto.subtypes
+                    subtypes = dto.subtypes,
+                    imageUrl = dto.imageUrl,
+                    text = dto.text
                 )
             }
 

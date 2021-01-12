@@ -1,7 +1,6 @@
 package com.rsms.mtgmanager.views.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,15 +10,17 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.rsms.mtgmanager.R
 import com.rsms.mtgmanager.databinding.FragmentLoginBinding
-import com.rsms.mtgmanager.domain.User
+import com.rsms.mtgmanager.databinding.FragmentRegistrationBinding
 import com.rsms.mtgmanager.viewmodels.LoginViewModel
+import com.rsms.mtgmanager.viewmodels.RegisterViewModel
 
-class LoginFragment : Fragment() {
+class RegistrationFragment : Fragment() {
 
-    private lateinit var binding: FragmentLoginBinding
 
-    private val viewModel: LoginViewModel by lazy {
-        ViewModelProvider(this).get(LoginViewModel::class.java)
+    private lateinit var binding: FragmentRegistrationBinding
+
+    private val viewModel: RegisterViewModel by lazy {
+        ViewModelProvider(this).get(RegisterViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -27,12 +28,12 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        binding = FragmentRegistrationBinding.inflate(inflater, container, false)
         binding.fragment = this
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        viewModel.loginResult.observe(viewLifecycleOwner) {result ->
+        viewModel.registrationResult.observe(viewLifecycleOwner) {result ->
             when(result.status) {
                 "success" -> {
                     Toast.makeText(context, result.message, Toast.LENGTH_LONG).show()
@@ -47,12 +48,8 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
-    fun signInUser(){
-        this.viewModel.validateUser();
-    }
-
     fun registerUser(){
-        findNavController().navigate(R.id.action_loginFragment_to_registrationFragment)
+        this.viewModel.registerUser()
     }
 
 }

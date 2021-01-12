@@ -7,4 +7,6 @@ data class CardDTO(val name: String,
                 val colorIdentity: List<String>,
                 val type: String,
                 val types: List<String>,
-                val subtypes: List<String>)
+                val subtypes: List<String>,
+                val imageUrl: String, val text: String?
+)

@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.os.bundleOf
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.rsms.mtgmanager.R
 import com.rsms.mtgmanager.domain.Card
@@ -28,6 +30,11 @@ class SetsAdapter(val context: Context, private val sets: List<Set>) :
     override fun onBindViewHolder(viewHolder: SetsAdapter.SetsViewHolder, position: Int) {
         val set: Set = sets[position]
         viewHolder.setName.text = set.name
+        viewHolder.itemView.setOnClickListener {
+            val navController = Navigation.findNavController(viewHolder.itemView)
+            val bundle = bundleOf("selectedSet" to set)
+            navController!!.navigate(R.id.action_setsListFragment2_to_setDetailFragment, bundle)
+        }
     }
 
     override fun getItemCount(): Int {

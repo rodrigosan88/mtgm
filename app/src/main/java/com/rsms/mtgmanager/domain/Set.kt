@@ -1,6 +1,7 @@
 package com.rsms.mtgmanager.domain
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 import java.util.*
 
 data class Set(
@@ -10,4 +11,4 @@ data class Set(
     val releaseDate: Date?,
     val magicCardsInfoCode: String?,
     val block: String?
-)
+): Serializable

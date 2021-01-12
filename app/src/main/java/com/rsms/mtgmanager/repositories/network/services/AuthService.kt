@@ -26,4 +26,17 @@ class AuthService (private val context: Context) {
         }
     }
 
+    suspend fun registerWithEmailAndPassword(email: String, password: String) : LoginResult = suspendCoroutine { nextStep ->
+        val operation = auth.createUserWithEmailAndPassword(email, password)
+
+        operation.addOnCompleteListener { op ->
+            val res = if(op.isSuccessful) {
+                LoginResult("success", context.getString(R.string.msg_registration_success))
+            } else {
+                LoginResult("fail", op.exception?.localizedMessage)
+            }
+            nextStep.resume(res)
+        }
+    }
+
 }
