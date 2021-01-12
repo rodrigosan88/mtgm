@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MTG Manager</string>
+    <string name="image_logo">Magic The Gathering Logo</string>
+    <string name="button_login">Sign In</string>
+    <string name="button_cardsList">Cards</string>
+    <string name="button_setsList">Sets</string>
+    <string name="placeholder_username">Username</string>
+    <string name="placeholder_password">Password</string>
+    <string name="msg_user_blank">Cannot authenticate an empty user</string>
+    <string name="msg_username_blank">Username cannot be blank</string>
+    <string name="msg_username_pattern">Username must be an email</string>
+    <string name="msg_password_blank">Password cannot be blank</string>
+    <string name="msg_password_length">Password must contain at least 6 characters</string>
+    <string name="msg_login_success">Welcome!</string>
+    <string name="msg_login_fail">Please make sure you typed the correct username and password</string>
+    <string name="title_dashboard_fragment">This will be the dashboard fragment</string>
+    <string name="title_activity_user">UserActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_sets">SetsActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+</resources>

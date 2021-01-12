@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.rsms.mtgmanager.views.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.rsms.mtgmanager.views.fragments.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_cardsActivity"
+            app:destination="@id/cardsActivity" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_setsActivity"
+            app:destination="@id/setsActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/cardsActivity"
+        android:name="com.rsms.mtgmanager.views.activities.CardsActivity"
+        android:label="activity_cards"
+        tools:layout="@layout/activity_cards" />
+
+    <activity
+        android:id="@+id/setsActivity"
+        android:name="com.rsms.mtgmanager.views.activities.SetsActivity"
+        android:label="activity_sets"
+        tools:layout="@layout/activity_sets" />
+
+</navigation>

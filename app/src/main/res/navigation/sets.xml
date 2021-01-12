@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sets"
+    app:startDestination="@id/setsListFragment2">
+
+    <fragment
+        android:id="@+id/setsListFragment2"
+        android:name="com.rsms.mtgmanager.views.fragments.SetsListFragment"
+        android:label="fragment_sets_list"
+        tools:layout="@layout/fragment_sets_list" >
+        <action
+            android:id="@+id/action_setsListFragment2_to_setDetailFragment"
+            app:destination="@id/setDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setDetailFragment"
+        android:name="com.rsms.mtgmanager.views.fragments.SetDetailFragment"
+        android:label="fragment_set_detail"
+        tools:layout="@layout/fragment_set_detail" />
+</navigation>
