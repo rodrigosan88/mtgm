@@ -26,6 +26,7 @@ class CardDetailFragment : Fragment() {
         val card = (arguments?.getSerializable("selectedCard") as Card)
         tvCardName.text = card.name
         tvDescription.text = card.text
+        tvCardType.text = card.type
         Picasso.get().load(card.imageUrl).resize(900,1300).centerCrop().into(ivCardImage)
     }
 

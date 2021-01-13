@@ -11,6 +11,11 @@
     <string name="placeholder_repeat_password">Repeat password</string>
     <string name="placeholder_card_title">Card title</string>
     <string name="placeholder_card_description">Card description</string>
+    <string name="placeholder_card_type">Card type</string>
+    <string name="placeholder_set_name">Set type</string>
+    <string name="placeholder_set_code">Set code</string>
+    <string name="placeholder_set_type">Set type</string>
+    <string name="placeholder_set_release_date">Set release date</string>
     <string name="msg_user_blank">Cannot authenticate an empty user</string>
     <string name="msg_username_blank">Username cannot be blank</string>
     <string name="msg_username_pattern">Username must be an email</string>

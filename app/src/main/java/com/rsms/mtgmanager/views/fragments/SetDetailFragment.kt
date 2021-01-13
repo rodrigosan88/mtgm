@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.rsms.mtgmanager.R
 import com.rsms.mtgmanager.domain.Set
-import kotlinx.android.synthetic.main.set_item.*
+import kotlinx.android.synthetic.main.fragment_set_detail.*
 
 class SetDetailFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -17,6 +17,10 @@ class SetDetailFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        setName.text = (arguments?.getSerializable("selectedSet") as Set).name
+        val set = (arguments?.getSerializable("selectedSet") as Set)
+        tvSetName.text = set.name
+        tvSetCode.text = set.code
+        tvSetType.text = set.type
+        tvSetReleaseDate.text = set.releaseDate.toString()
     }
 }
